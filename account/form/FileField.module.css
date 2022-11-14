@@ -1,0 +1,99 @@
+.fileField {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.fileField .field {
+    display: grid;
+    align-items: center;
+}
+
+
+/*input type file*/
+
+.fakeFieldBorder {
+    height: fit-content;
+    border: 2px dashed #CCCCCC;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: max(1.1vw, 16px);
+    border: 2px dashed #CCCCCC;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    grid-column: 1/span 2;
+    grid-row: 1/2;
+    text-decoration: double;
+    text-align: center;
+    color: transparent;
+}
+
+.fakeFileField {
+    padding: 20px;
+    font-size: max(1.1vw, 16px);
+    border: 2px dashed #CCCCCC;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 100%;
+    text-decoration: double;
+    text-align: center;
+    color: transparent;
+}
+
+.fileField .field .content {
+    grid-row: 1/2;
+    grid-column: 1/span 2;
+    z-index: 88888;
+    position: relative;
+    pointer-events: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.field p {
+    margin: 0;
+    padding: 0;
+}
+
+.fileName {
+    font-weight: 500;
+    color: #1E175B;
+    text-align: right;
+}
+
+.field p:first-child {
+    padding-right: 5px;
+}
+
+p.button {
+    color: #DA9800;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    pointer-events: all;
+    padding-left: 5px;
+}
+
+
+/*input native choose file button override*/
+
+.fakeFileField::-webkit-file-upload-button {
+    opacity: 0;
+}
+
+.fakeFileField {
+    -moz-opacity: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width:700px) {
+    .content .note {
+        display: none;
+    }
+}

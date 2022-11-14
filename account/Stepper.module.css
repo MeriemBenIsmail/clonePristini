@@ -1,0 +1,90 @@
+            .stepperContainer {
+                padding: 20px 0px;
+                width: 100%;
+                padding-bottom: 50px;
+            }
+            
+            .stepper {
+                display: grid;
+                align-items: center;
+            }
+            
+            .step {
+                justify-content: center;
+                align-items: center;
+                display: grid;
+                grid-template-columns: 1fr 25px 1fr;
+            }
+            
+            .stepperContainer .titles {
+                display: grid;
+                padding-top: 10px;
+                text-align: center;
+                color: #828081;
+                font-weight: 600;
+            }
+            
+            .circle {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                z-index: 2;
+                background: #F4F4F4 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 6px #00000029;
+                border: 2px solid #E4E7EE;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            
+            .circle p {
+                top: 25px;
+                text-align: center;
+                font-weight: 400;
+                letter-spacing: 0px;
+                color: #828081;
+                left: -100%;
+                right: -100%;
+                display: inline;
+            }
+            
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: #E4E7EE;
+                z-index: 1;
+            }
+            
+            .line.hidden {
+                opacity: 0;
+            }
+            
+            .innerCircle {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #DA9800;
+            }
+            
+            .active .circle {
+                border: none;
+            }
+            
+            .done .circle,
+            .done .line:first-child,
+            .active .line:first-child,
+            .colored {
+                background-color: #DA9800;
+                border: none;
+            }
+            
+            .coloredText {
+                color: #DA9800;
+            }
+            
+            @media screen and (max-width:1000px) {
+                .stepperContainer .titles {
+                    display: none;
+                }
+            }
